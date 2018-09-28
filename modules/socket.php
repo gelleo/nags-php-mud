@@ -1,4 +1,4 @@
-<?
+<?php
 /* Most of the code bellow was taken from http://kacke.de/php_samples/source.php?f=socke.inc but modified to work with the NAGS core system
 and fixed a few minor bugs, all credit should go to the origional developer because he was the man :D  -- tvalladon*/
 /*============================================================================*\
@@ -663,7 +663,7 @@ class SOCKET {
                     $this->Error("","No valid socketdescriptor(id) given !\n");
                     return false;
                 }
-                socket_getpeername($deskriptor, &$addr);
+                socket_getpeername($deskriptor, $addr);
                 if(!$addr){
                     return false;
                 }

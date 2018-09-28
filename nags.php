@@ -1,5 +1,4 @@
-#!/usr/bin/php5
-<?
+<?php
 /*============================================================================*\
 |	NAGS - an AMP (Apache, MySql and PHP) backed mud system
 |	by Terry Valladon
@@ -30,22 +29,22 @@
 	$QUIET = False;
 	$DEAMON = False;
 	//Read command line arguments into an array	
-	$arg_array = ARGUMENTS($_SERVER['argv']);
-	if($arg_array['quiet'] == True OR $arg_array['q'] == True)
-	{
+	//$arg_array = ARGUMENTS($_SERVER['argv']);
+	//if($arg_array['quiet'] == True OR $arg_array['q'] == True)
+	//{
 		$QUIET = True;
-	}
-	if($arg_array['deamon'] == True OR $arg_array['d'] == True)
-	{
+	//}
+	//if($arg_array['deamon'] == True OR $arg_array['d'] == True)
+	//{
 		$DEAMON = True;
-	}
+	//}
 
 	require_once('modules/main.php');
 	declare(ticks = 1);
 
-	pcntl_signal(SIGTERM, 'signal_handler');
-	pcntl_signal(SIGINT, 'signal_handler');
-	pcntl_signal(SIGALRM, "signal_handler");
+	//pcntl_signal(SIGTERM, 'signal_handler');
+	//pcntl_signal(SIGINT, 'signal_handler');
+	//pcntl_signal(SIGALRM, "signal_handler");
 	
 	if(!$MAIN = new MAIN())
 	{
